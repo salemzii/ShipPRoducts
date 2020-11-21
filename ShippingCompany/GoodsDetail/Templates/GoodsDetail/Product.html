@@ -1,0 +1,10 @@
+{% extends "goodsdetail/Base.html" %}
+
+{% block content %}
+        <h1>NAME: {{ product.name }} </h1>
+        <h3>SIZE/WEIGHT: {{ product.size }} </h3>
+        <h3>AMOUNT: {{ product.amount }} </h3>
+        <h3>ITEM DESCRIPTION: {{ product.description }} </h3>
+        <h3>BRAND: {{ product.brand }} </h3>
+        <h3>ORDERED ON: {{ product.date }} </h3>
+{% endblock content %}
