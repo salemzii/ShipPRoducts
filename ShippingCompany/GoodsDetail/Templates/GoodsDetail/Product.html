@@ -1,10 +1,56 @@
 {% extends "goodsdetail/Base.html" %}
+{% load static %}
 
 {% block content %}
         <h1>NAME: {{ product.name }} </h1>
+        <div id="slides" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                        <li data-target="#slides" data-slide-to="0" class="active"></li>
+                        <li data-target="#slides" data-slide-to="1"></li>
+                        <li data-target="#slides" data-slide-to="2"></li>
+                </ul>
+               <div class="carousel-inner">
+                       <div class="carousel-item">
+                              <img src="{% static 'images/front.jpg' %}">
+                       </div>
+                        <div class="carousel-item">
+                              <img src="{% static 'images/back.jpg' %}">
+                       </div>
+                        <div class="carousel-item">
+                              <img src="{% static 'images/F&B.jpg' %}">
+                       </div>
+               </div>
+        </div>
         <h3>SIZE/WEIGHT: {{ product.size }} </h3>
         <h3>AMOUNT: {{ product.amount }} </h3>
-        <h3>ITEM DESCRIPTION: {{ product.description }} </h3>
+        <div class="container-fluid">
+                <div class="row jumbotron">
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                                <p class="lead">{{ product.description }}</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                                <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">See item's Geolocation</button></a>
+                        </div>
+                </div>
+        </div>
         <h3>BRAND: {{ product.brand }} </h3>
         <h3>ORDERED ON: {{ product.date }} </h3>
+        <hr>
+        <div class="container-fluid padding">
+                <div class="row text-center padding">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <img src="{% static 'images/BizWoman.jpg' %}" height="95" width="60">
+                        <h3>All safe never miss, their delivery services are top-notch and they are 100 percent reliable at all times</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <img src="{% static 'images/Bizman.jpg' %}" height="95" width="60">
+                        <h3>All safe never miss, their delivery services are top-notch and they are 100 percent reliable at all times</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <img src="{% static 'images/busineswoman.jpg' %}" height="95" width="60">
+                        <h3>All safe never miss, their delivery services are top-notch and they are 100 percent reliable at all times</h3>
+                    </div>
+                </div>
+        </div>
+
 {% endblock content %}

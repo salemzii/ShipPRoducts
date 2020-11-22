@@ -3,9 +3,9 @@ from django.views.generic import DetailView
 from .models import Goods
 
 def welcome(request):
-    return render(request, 'goodsdetail/welcome.html')
+    return render(request, 'GoodsDetail/welcome.html')
 
 class GoodsDetailView(DetailView):
     model = Goods
-    template_name = 'goodsdetail/Product.html'
+    template_name = 'GoodsDetail/Product.html'
     context_object_name = 'product'

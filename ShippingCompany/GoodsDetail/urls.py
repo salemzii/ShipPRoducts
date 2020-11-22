@@ -4,5 +4,5 @@ from .views import GoodsDetailView
 
 urlpatterns = [
     path('', views.welcome, name='welcome'),
-    path('<int:pk>/goodsdetail', GoodsDetailView.as_view(), name='products')
+    path('<int:pk>/GoodsDetail', GoodsDetailView.as_view(), name='products')
 ]
